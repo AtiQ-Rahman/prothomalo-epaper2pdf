@@ -10,6 +10,9 @@ This PowerShell script downloads images from [Prothom Alo ePaper](https://epaper
 - PowerShell
 - ImageMagick (Please download and install ImageMagick from [here](https://imagemagick.org/script/download.php#windows))
 
+## Note
+Open PowerShell/Terminal as Admin then run this `Set-ExecutionPolicy -ExecutionPolicy Bypass -Scope CurrentUser` before running the script.
+
 ## Usage
 1. Clone or download the script to your local machine.
 2. Open PowerShell/Terminal and navigate to the directory containing the script.
