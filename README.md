@@ -12,8 +12,8 @@ This PowerShell script downloads images from [Prothom Alo ePaper](https://epaper
 
 ## Usage
 1. Clone or download the script to your local machine.
-2. Open PowerShell and navigate to the directory containing the script.
-3. Run the script by typing `.\run.ps1` and hitting Enter or double clicking on the ps1 file.
+2. Open PowerShell/Terminal and navigate to the directory containing the script.
+3. Run the script by typing `.\run.ps1` and hitting Enter.
 
 ## How It Works
 - Downloads website HTML source.
