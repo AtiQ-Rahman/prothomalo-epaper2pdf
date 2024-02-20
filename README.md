@@ -3,7 +3,7 @@
 [![Static Badge](https://img.shields.io/badge/Join%20Telegram%20Group-Readers%20Club-blue)](https://t.me/+jTKFvw-_SXg0NzZl)
 
 ## Description
-This PowerShell script downloads images from [prothom alo epaper](https://epaper.prothomalo.com/) website and converts them into a PDF file using ImageMagick.
+This PowerShell script downloads images from [Prothom Alo ePaper](https://epaper.prothomalo.com/) website and converts them into a PDF file using ImageMagick.
 
 ## Requirements
 - Windows OS
