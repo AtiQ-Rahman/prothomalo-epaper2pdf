@@ -94,6 +94,27 @@ function Download-Images {
     }
 }
 
+# Function to rename downloaded files using regex pattern
+function Rename-DownloadedFiles {
+    param (
+        [string]$imageFolder
+    )
+
+    Write-Host -ForegroundColor Green "Renaming downloaded files in $imageFolder using regex pattern..."
+
+    # Get all files in the folder
+    $files = Get-ChildItem -Path $imageFolder
+
+    foreach ($file in $files) {
+        # Extract the file name using regex and rename the file
+        $newFileName = $file.Name -replace '^.*?_', ''  # Remove everything until the first underscore
+        $newFilePath = Join-Path -Path $imageFolder -ChildPath $newFileName
+        Rename-Item -Path $file.FullName -NewName $newFileName
+    }
+
+    Write-Host -ForegroundColor Green "Files renamed successfully."
+}
+
 # Function to convert images to PDF
 function Convert-ToPDF {
     param (
@@ -141,6 +162,9 @@ Extract-ImageLinks -htmlFilePath ($tempFolder + "\" + $htmlFileName) -outputFile
 
 # Download images
 Download-Images -imageLinksFilePath ($tempFolder + "\" + $imageLinksFileName) -imageFolder ($tempFolder + "\images")
+
+# Rename downloaded files
+Rename-DownloadedFiles -imageFolder ($tempFolder + "\images")
 
 # Convert images to PDF
 Convert-ToPDF -imageFolder ($tempFolder + "\images") -pdfFilePath $pdfFilePath
